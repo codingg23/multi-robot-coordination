@@ -1,0 +1,8 @@
+opencv-python-headless>=4.8
+numpy>=1.24
+pyzmq>=25.0
+gymnasium>=0.29
+stable-baselines3>=2.1
+ultralytics>=8.0
+RPi.GPIO>=0.7; platform_machine == "aarch64"  # only on Pi
+pytest>=7.4
