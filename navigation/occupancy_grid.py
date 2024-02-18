@@ -183,3 +183,15 @@ class OccupancyGrid:
         grid._hit_counts = np.array(d["hits"], dtype=np.int16)
         grid._miss_counts = np.array(d["misses"], dtype=np.int16)
         return grid
+
+
+def grid_stats(grid: OccupancyGrid) -> dict:
+    """Return basic statistics about the grid state."""
+    total = grid.rows * grid.cols
+    return {
+        "total_cells": total,
+        "free": int(np.sum(grid.cells == FREE)),
+        "occupied": int(np.sum(grid.cells == OCCUPIED)),
+        "unknown": int(np.sum(grid.cells == UNKNOWN)),
+        "coverage": grid.coverage_fraction(),
+    }
