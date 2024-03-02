@@ -195,3 +195,5 @@ def grid_stats(grid: OccupancyGrid) -> dict:
         "unknown": int(np.sum(grid.cells == UNKNOWN)),
         "coverage": grid.coverage_fraction(),
     }
+
+RAYCAST_STEP_M = 0.04  # default step size for raycast
