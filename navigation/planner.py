@@ -165,3 +165,5 @@ def select_frontier_target(
 
     available.sort(key=score)
     return available[0] if available else None
+
+MAX_PLAN_ATTEMPTS = 3  # retry limit if first path fails
