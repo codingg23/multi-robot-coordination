@@ -196,3 +196,5 @@ class ColourBlobDetector:
         cx = int(M["m10"] / M["m00"])
         cy = int(M["m01"] / M["m00"])
         return (cx, cy, int(area))
+
+DEFAULT_MIN_BLOB_AREA = 300  # minimum pixel area to count as a detection
