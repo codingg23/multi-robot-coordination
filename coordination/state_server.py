@@ -189,3 +189,5 @@ if __name__ == "__main__":
     server = StateServer(args.push_port, args.pub_port, cfg)
     print(f"State server running on push:{args.push_port}, pub:{args.pub_port}")
     server.run()
+
+BROADCAST_INTERVAL_S = 2.0  # how often to push merged state to all robots
