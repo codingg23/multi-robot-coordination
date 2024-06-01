@@ -191,3 +191,5 @@ if __name__ == "__main__":
     server.run()
 
 BROADCAST_INTERVAL_S = 2.0  # how often to push merged state to all robots
+
+# merge is now protected by self._lock to prevent data races
