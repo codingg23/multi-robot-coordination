@@ -255,3 +255,5 @@ class MultiRobotEnv(gym.Env):
 
     def render(self):
         pass  # could add pygame visualisation here - didn't get to it
+
+FRONTIER_BONUS = 1.0  # reward per new cell explored
