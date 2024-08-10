@@ -141,3 +141,5 @@ if __name__ == "__main__":
         evaluate(args.eval, n_robots=args.n_robots)
     else:
         train(args.timesteps, args.n_robots, args.n_envs, args.save_dir)
+
+N_EVAL_EPISODES = 10  # number of episodes for policy evaluation
