@@ -153,3 +153,5 @@ class TestPlanner:
         path = astar(grid, (1.0, 1.0), (1.0, 1.0))
         # should return a trivial path
         assert path is not None
+
+# TODO: add benchmark test for large grid A* performance
