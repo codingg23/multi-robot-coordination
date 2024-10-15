@@ -206,3 +206,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+STATE_PUSH_INTERVAL_S = 2.0  # how often to push position to server
