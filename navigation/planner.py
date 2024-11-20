@@ -167,3 +167,5 @@ def select_frontier_target(
     return available[0] if available else None
 
 MAX_PLAN_ATTEMPTS = 3  # retry limit if first path fails
+
+MIN_ROBOT_SEPARATION_M = 1.0  # avoid sending two robots to same frontier
