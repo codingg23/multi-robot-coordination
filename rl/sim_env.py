@@ -257,3 +257,5 @@ class MultiRobotEnv(gym.Env):
         pass  # could add pygame visualisation here - didn't get to it
 
 FRONTIER_BONUS = 1.0  # reward per new cell explored
+
+# observation size: grid(1600) + other_robots(n-1)*2 + objects(9) + own_state(3)
