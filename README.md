@@ -86,3 +86,7 @@ tests/           - unit tests for grid math and comms protocol
 After doing this I'd probably use a proper multi-agent RL framework rather than rolling
 my own. Also proper SLAM instead of the simple occupancy grid would fix the drift issue.
 The hardware design works but the wiring is messy - would use a custom PCB next time.
+
+## Training results
+
+After 500k steps with 3 robots: mean episode reward +127, coverage ~82%, target found in 78% of episodes.
