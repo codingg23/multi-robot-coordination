@@ -6,7 +6,7 @@ Built as a personal project in 2024 during high school.
 
 The robots use computer vision to recognise landmarks and detect obstacles, share their
 observations over a shared state server, and use a simple learned policy to decide where
-to explore next. The end goal was "search-and-retrieve" - send the swarm into a room,
+to explore next. The end goal was "search and retrieve" - send the swarm into a room,
 have it find a specific coloured object, and signal its location.
 
 It mostly works. The mapping part is solid. The RL part is rough - I did not have enough
@@ -26,7 +26,7 @@ compute to train properly, so the policy is more of a heuristic with learned wei
 - **Coordination policy**: trained with PPO. Observation is the local occupancy grid +
   positions of other robots + known object locations. Action is a heading + speed command.
 
-- **Search-and-retrieve**: once all robots have seen the target object at least once, the
+- **Search and retrieve**: once all robots have seen the target object at least once, the
   nearest robot is assigned to go get it while others hold position.
 
 ## Hardware
@@ -77,13 +77,13 @@ tests/           - unit tests for grid math and comms protocol
 ## Known issues
 
 - The RL policy doesn't handle >4 robots well, training becomes unstable
-- Camera latency on Pi 4 is ~180ms end-to-end, causes issues at higher speeds
+- Camera latency on Pi 4 is ~180ms end to end, causes issues at higher speeds
 - Object position estimates drift without correction (no visual odometry)
 - The server is a single point of failure - if it goes down, robots freeze
 
 ## What I'd do differently
 
-After doing this I'd probably use a proper multi-agent RL framework rather than rolling
+After doing this I'd probably use a proper multi agent RL framework rather than rolling
 my own. Also proper SLAM instead of the simple occupancy grid would fix the drift issue.
 The hardware design works but the wiring is messy - would use a custom PCB next time.
 
